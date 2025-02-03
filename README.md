@@ -41,4 +41,24 @@
 1. 克隆项目
 2. 安装依赖
 3. 运行项目
+
+## 项目结构
+
+```
+MBTI/
+├── web/                      # Web 前端
+│   ├── index.html
+│   ├── css/
+│   │   └── style.css        # 样式文件
+│   └── js/
+│       ├── chat.js          # 聊天功能
+│       ├── mbti.js          # MBTI 测试逻辑
+│       └── quotes.js        # 激励语句管理
+├── mbti-backend/            # 后端
+│   ├── server.js            # 主服务器文件
+│   ├── controllers/         # 控制器
+│   ├── services/           # 服务层
+│   └── config/             # 配置文件
+└── miniprogram/            # 小程序端
+```
         

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MBTI测试与每日激励</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 聊天组件 -->
+    <div id="chat-wrapper">
+        <button class="chat-button" onclick="toggleChat()">💬</button>
+        <div class="chat-container" id="chatContainer">
+            <div class="chat-header">
+                <span id="aiAssistantName">AI 助手</span>
+                <button onclick="toggleChat()" style="background: none; border: none; color: white; cursor: pointer;">✕</button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <!-- 消息将在这里动态添加 -->
+            </div>
+            <div class="chat-input-container">
+                <div class="chat-actions">
+                    <button class="chat-action-btn" onclick="toggleVoiceInput()" title="语音输入">🎤</button>
+                </div>
+                <input type="text" class="chat-input" id="chatInput" placeholder="输入消息..." onkeypress="handleKeyPress(event)">
+                <button class="chat-action-btn" onclick="sendMessage()" title="发送">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主容器 -->
+    <div class="container">
+        <div class="header">
+            <h1>MBTI测试与每日激励</h1>
+        </div>
+        <div id="main-container">
+            <!-- 内容将通过 JavaScript 动态加载 -->
+        </div>
+    </div>
+
+    <!-- 引入 JavaScript 文件 -->
+    <script src="js/mbti.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+</html> 
