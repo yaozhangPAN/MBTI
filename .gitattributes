@@ -1,0 +1,7 @@
+# 自动检测文本文件并进行规范化
+* text=auto
+
+# 指定特定文件使用 LF
+*.js text eol=lf
+*.json text eol=lf
+*.md text eol=lf 

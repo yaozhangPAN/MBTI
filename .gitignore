@@ -21,4 +21,13 @@ Thumbs.db
 miniprogram_npm/
 miniprogram/node_modules/
 project.private.config.json
-project.config.json 
+project.config.json
+
+# 微信开发者工具本地配置
+.wxdev/
+*.wxss.map
+*.js.map
+
+# 后端
+mbti-backend/node_modules/
+mbti-backend/.env 
