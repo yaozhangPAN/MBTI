@@ -300,7 +300,7 @@
         <button class="chat-button" onclick="toggleChat()">💬</button>
         <div class="chat-container" id="chatContainer">
             <div class="chat-header">
-                <span>AI 助手</span>
+                <span id="aiAssistantName">AI 助手</span>
                 <button onclick="toggleChat()" style="background: none; border: none; color: white; cursor: pointer;">✕</button>
             </div>
             <div class="chat-messages" id="chatMessages">
@@ -862,12 +862,6 @@
                 addMessage(message, 'user');
                 input.value = '';
                 
-                // 显示加载状态
-                const loadingDiv = document.createElement('div');
-                loadingDiv.className = 'message bot-message loading';
-                loadingDiv.textContent = '正在思考';
-                document.getElementById('chatMessages').appendChild(loadingDiv);
-                
                 try {
                     const response = await fetch('http://localhost:3000/api/chat', {
                         method: 'POST',
@@ -882,11 +876,11 @@
                     });
                     
                     const data = await response.json();
-                    loadingDiv.remove();
+                    document.getElementById('aiAssistantName').textContent = 
+                        `AI 助手 - ${data.aiName}`;
                     addMessage(data.response, 'bot');
                     saveConversation();
                 } catch (error) {
-                    loadingDiv.remove();
                     addMessage('抱歉，出现了一些问题，请稍后再试。', 'bot');
                 }
             }
