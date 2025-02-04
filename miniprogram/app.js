@@ -1,11 +1,15 @@
 App({
   onLaunch: function () {
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        console.log(res.code);
-        // 这里可以调用后端接口进行用户登录
-      }
-    });
+    if (!wx.cloud) {
+      console.error('请使用 2.2.3 或以上的基础库以使用云能力');
+    } else {
+      wx.cloud.init({
+        env: 'yz-8gwtl2i3c8cf0764', // 替换为你的云开发环境ID
+        traceUser: true,
+      });
+    }
+  },
+  globalData: {
+    userInfo: null
   }
 }); 

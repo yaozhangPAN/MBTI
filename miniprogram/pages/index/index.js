@@ -1,15 +1,27 @@
 Page({
-  data: {
-    mbtiType: ''
+  data: {},
+
+  onLoad: function() {
+    console.log('页面加载');
+    const mbtiType = wx.getStorageSync('mbtiType');
+    if (mbtiType) {
+      wx.switchTab({
+        url: '/pages/quote/quote'
+      });
+    }
   },
-  onInputChange: function (e) {
-    this.setData({
-      mbtiType: e.detail.value
+
+  goToInput: function() {
+    console.log('点击了已知MBTI类型按钮');
+    wx.navigateTo({
+      url: '/pages/input/input'
     });
   },
-  onSubmit: function () {
-    // 提交 MBTI 类型
-    console.log('用户的 MBTI 类型:', this.data.mbtiType);
-    // 这里可以调用后端接口保存用户的 MBTI 类型
+
+  goToTest: function() {
+    console.log('点击了开始MBTI测试按钮');
+    wx.navigateTo({
+      url: '/pages/test/test'
+    });
   }
 }); 

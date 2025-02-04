@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="input-section">
+    <text class="title">请输入您的MBTI类型</text>
+    <input 
+      type="text" 
+      placeholder="例如：INTJ" 
+      maxlength="4"
+      value="{{mbtiInput}}"
+      bindinput="onInputChange"
+    />
+    <text class="hint">请输入4个字母的MBTI类型</text>
+  </view>
+
+  <view class="button-group">
+    <button class="confirm-btn" bindtap="saveMBTIType">确认</button>
+    <button class="back-btn" bindtap="goBack">返回</button>
+  </view>
+</view> 

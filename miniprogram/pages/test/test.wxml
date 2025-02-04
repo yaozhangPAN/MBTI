@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="progress-bar">
+    <view class="progress" style="width: {{progress}}%"></view>
+  </view>
+
+  <view class="question-container">
+    <text class="question-text">{{questions[currentQuestion].text}}</text>
+    
+    <view class="options-container">
+      <view 
+        class="option" 
+        wx:for="{{questions[currentQuestion].options}}" 
+        wx:key="value"
+        bindtap="selectAnswer"
+        data-value="{{item.value}}"
+      >
+        <text>{{item.text}}</text>
+      </view>
+    </view>
+  </view>
+</view> 

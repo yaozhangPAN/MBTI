@@ -31,3 +31,7 @@ project.config.json
 # 后端
 mbti-backend/node_modules/
 mbti-backend/.env 
+mbti-backend/.env.example 
+
+# 上传文件目录
+uploads/ 

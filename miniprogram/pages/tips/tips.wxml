@@ -1,7 +1,0 @@
-<view class="container">
-  <view class="tips-container">
-    <view class="tip-card" wx:for="{{tips}}" wx:key="index">
-      <text class="tip-text">{{item}}</text>
-    </view>
-  </view>
-</view> 

@@ -1,13 +1,34 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/mbtiTest/mbtiTest",
-    "pages/tips/tips"
+    "pages/input/input",
+    "pages/test/test",
+    "pages/quote/quote",
+    "pages/chat/chat"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "MBTI助手",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#4CAF50",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "🏠 首页"
+      },
+      {
+        "pagePath": "pages/quote/quote",
+        "text": "💡 激励"
+      },
+      {
+        "pagePath": "pages/chat/chat",
+        "text": "💬 AI助手"
+      }
+    ]
   }
 } 

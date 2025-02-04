@@ -1,0 +1,47 @@
+.container {
+  padding: 20px;
+}
+
+.quote-container {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.mbti-type {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.time-message {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.quote-text {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  margin: 20px 0;
+  padding: 10px;
+  border-left: 4px solid #4CAF50;
+  background-color: #f9f9f9;
+}
+
+.button-group {
+  margin-top: 30px;
+}
+
+.refresh-btn {
+  background-color: #4CAF50;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.home-btn {
+  background-color: #f5f5f5;
+  color: #333;
+} 

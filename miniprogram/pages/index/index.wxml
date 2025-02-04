@@ -1,22 +1,10 @@
 <view class="container">
   <view class="header">
-    <text class="title">欢迎使用MBTI助手</text>
+    <text class="title">MBTI测试与每日激励</text>
   </view>
   
-  <view class="content">
-    <view class="input-section">
-      <text>请输入您的MBTI类型：</text>
-      <input type="text" placeholder="例如：INTJ" bindinput="onInputChange" value="{{mbtiType}}" />
-    </view>
-    
-    <button class="submit-btn" bindtap="onSubmit">确认</button>
-    
-    <view class="or-section">
-      <text>或者</text>
-    </view>
-    
-    <navigator url="/pages/mbtiTest/mbtiTest" class="test-btn">
-      <button>开始MBTI测试</button>
-    </navigator>
+  <view class="action-buttons">
+    <button class="btn" bindtap="goToInput">已知MBTI类型</button>
+    <button class="btn" bindtap="goToTest">开始MBTI测试</button>
   </view>
 </view> 
